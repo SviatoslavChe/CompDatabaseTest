@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.9.6"
+ }
+
+group 'org.che'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    }
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.4'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.6.0'
+    testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.1.1'
+    testImplementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.9.6'
+    testImplementation group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.9.6'
+}
+
+test {
+    useTestNG()
+}
+
